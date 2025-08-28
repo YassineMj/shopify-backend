@@ -1,8 +1,6 @@
 package com.example.shopifybackend.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class Panier {
@@ -10,7 +8,7 @@ public class Panier {
     private Long id;
 
     @ManyToOne
-    private User user;
+    private UserEntity user;
 
     @ManyToOne
     private Abonement abonement;
@@ -23,11 +21,11 @@ public class Panier {
         this.id = id;
     }
 
-    public User getUser() {
+    public UserEntity getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserEntity user) {
         this.user = user;
     }
 

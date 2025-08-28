@@ -1,7 +1,7 @@
 package com.example.shopifybackend.service;
 
 import com.example.shopifybackend.entity.Abonement;
-import com.example.shopifybackend.entity.User;
+import com.example.shopifybackend.entity.UserEntity;
 import com.example.shopifybackend.exception.ResourceNotFoundException;
 import com.example.shopifybackend.repository.AbonementRepository;
 import com.example.shopifybackend.repository.UserRepository;
@@ -25,6 +25,6 @@ public class AdminService {
     }
     public void deleteAbonement(Long id) { abonementRepo.deleteById(id); }
     public List<Abonement> getAllAbonements() { return abonementRepo.findAll(); }
-    public List<User> getAllUsers() { return userRepo.findAll(); }
+    public List<UserEntity> getAllUsers() { return userRepo.findAll(); }
 }
 
